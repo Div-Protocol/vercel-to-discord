@@ -4,7 +4,7 @@ import { VercelWebhookEvent } from '../../../types';
 
 const { WEBHOOK_INTEGRATION_SECRET, DISCORD_WEBHOOK_URL, VERCEL_TOKEN, VERCEL_TEAM_ID } = process.env;
 
-export const POST = async (req: Request, res: Response) => {
+export const POST = async (req: Request) => {
     console.log('=== Webhook received ===');
     console.log('Timestamp:', new Date().toISOString());
     console.log('Headers:', Object.fromEntries(req.headers.entries()));
